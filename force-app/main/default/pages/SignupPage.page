@@ -1,0 +1,78 @@
+<apex:page controller="CustomLoginSignupController">
+    <apex:form >
+        <apex:pageMessages />
+        <style>
+            .form-container {
+                width: 50%;
+                margin: 50px auto;
+                padding: 35px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                text-align: center;
+            }
+            .form-container h2 {
+                color: #333;
+            }
+            .form-container .field {
+                margin-bottom: 10px;
+            	text-align: left;
+            }
+            .form-container .field label {
+                display: block;
+                margin-bottom: 5px;
+                color: #666;
+            }
+            .form-container .field input {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .form-container .submit-btn {
+                width: 100%;
+                padding: 10px;
+                background-color: #0070d2;
+                color: #000000;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .form-container .submit-btn:hover {
+                background-color: #005bb5;
+            }
+            .form-container .login-link {
+                margin-top: 20px;
+                display: block;
+                color: #0070d2;
+                text-decoration: none;
+            }
+            .form-container .login-link:hover {
+                text-decoration: underline;
+            }
+        </style>
+       
+        <div class="form-container">
+            
+             <h2>Sign Up</h2>
+            <div class="field">
+                <label for="firstName">First Name</label>
+                <apex:inputText id="firstName" value="{!firstName}" required="true"/>
+            </div>
+            <div class="field">
+                <label for="lastName">Last Name</label>
+                <apex:inputText id="lastName" value="{!lastName}" required="true"/>
+            </div>
+            <div class="field">
+                <label for="signupEmail">Email</label>
+                <apex:inputText id="signupEmail" value="{!signupEmail}" required="true"/>
+            </div>
+            <div class="field">
+                <label for="signupPassword">Password</label>
+                <apex:inputSecret id="signupPassword" value="{!signupPassword}" required="true"/>
+            </div>
+            <apex:commandButton value="Sign Up" action="{!signup}" styleClass="submit-btn"/>
+            <a href="{!loginPageUrl}" class="login-link">Already have an account? Log in here.</a>
+        </div>
+    </apex:form>
+</apex:page>
