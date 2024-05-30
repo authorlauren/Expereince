@@ -1,15 +1,15 @@
 # Salesforce Experience Site SignUp and Login page
 
-This file contains the code for the experience cloud site in Visualforce and Apex code. In the section of the code where a new user is created make sure you select the change it to the profile you would like to use in Salesforce
+This file contains the code for the experience cloud site in Visualforce and Apex code. In the section of the code where a new user is created make sure you change the profile to the  profile you would like to use in Salesforce.
 
-## How Do You Plan to Deploy Your Changes?
+## How it works?
+It only works for experience cloud site in Salesforce. 
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
-
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
+## How to Integrate with Digital Experience Site
+Go to Setup and navigate to Digital Experiences > All Sites.
+Click on your site workspace and go to Administration > Login & Registration.
+Set the Registration Page Type to Custom Visualforce.
+Specify the name of your Visualforce page in the Login Page field. (Either the SignUp or Login depending on the one you want to display first)
 
 
 
